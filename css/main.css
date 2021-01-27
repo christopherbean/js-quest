@@ -1,0 +1,725 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ====  Mobile ===== */
+
+/*general*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*remove default browser margin and padding*/
+
+html{
+    font-size: 16px;
+}
+
+body{
+    font-family: 'Mystery Quest', cursive;
+    color: #2b2b2b;
+    background-color: #3b3b3b;
+    
+}
+
+ul, ol{
+    list-style: none;
+    margin: 0;
+}
+
+
+h1,
+h2,
+h3,
+h4{
+    margin: 0;
+}
+
+p{
+    margin: 0;
+}
+
+img{
+    width: 100%;
+}
+
+figure{
+    margin: 0;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.content-wrapper{
+    width: 90%;
+    margin: 25px 0;
+}
+
+
+/*######### LOGO/header ############*/
+
+header figure{
+    width: 70%;
+}
+
+header .content-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+
+
+/*######### Start screen ############*/
+
+.game{
+    background: url("../img/castle-bg.jpg") right no-repeat;
+    background-size: cover;
+    
+}
+
+.play{
+    background: url("../img/handpaintedwall2.jpg") center repeat;
+    background-size: cover;
+}
+
+.start-screen .content-wrapper {
+    background: rgba(0,0,0, .6);
+    margin-top: 35px;
+    margin-bottom: 50px;
+}
+
+.start-screen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+
+.start-screen .content-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+/*    margin-top: 25px;*/
+}
+
+.start-screen p{
+    font-family: 'Roboto', sans-serif;
+    color: #eeeeee;
+    text-align: center;
+    margin: 15px;
+}
+
+.start-screen .content-wrapper button{
+    background: none;
+    border: none;
+    width: 55%;
+    margin: 25px 0;
+}
+
+
+
+/*######### Game-screen #######################*/
+
+/*hides the game screen until start is pressed*/
+.game-screen{
+    display: none;
+/*JavaScript changes display to flex allowing the following properties to work*/
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    color: #3b3b3b;
+}
+
+.game-screen .content-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow:column wrap;
+    margin-top: 35px;
+    margin-bottom: 50px;
+}
+
+.game-screen .battle-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-flow: row wrap;
+    width: 100%;
+}
+
+.player{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    background: #dbd288;
+    border: 2px solid black;
+    padding: 25px 0;
+    width: 47%;
+}
+
+.actions{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/*removes weird bg button in Moz*/
+.actions button{
+    background: none;
+}
+
+#atk,
+#use-pot{
+    width: 35%;
+}
+
+
+
+.opponent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    background: #dbd288;
+    border: 2px solid black;
+    padding: 25px 0 47px;
+    width: 47%;
+}
+
+/*action-report combat*/
+
+.action-report{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: row nowrap;
+    background: url(../img/squared-scroll.png) center no-repeat;
+    background-size: contain;
+    height: 300px;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.report-layout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+
+.report-layout h1{
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+
+
+
+/*#### Footer ####*/
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    font-size: 85%;
+    text-align: center;
+    color: #d8da57;
+    background-color: #3b3b3b;
+}
+
+footer .content-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+
+.social-media{
+    width: 65%;
+    margin: 25px 0 50px 0;
+}
+
+.social-icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-icons p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #d8da57;
+    font-size: 2.3em;
+    height: 40px;
+    width: 40px;
+}
+
+.social-icons a{
+    padding: 6px 0px 0px 1px;
+}
+
+.social-icons p i{
+    color: #3b3b3b;
+}
+
+.copyright a{
+    color: #d8da57;
+}
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (max-width: 320px) {
+/*  Styles added to account for new smaller width Galaxy fold and cleaner look
+    for Iphone 5*/
+
+    /*defaults*/
+    .content-wrapper{
+        margin: 20px 0;
+    }
+    
+    header figure{
+        width: 80%;
+    }
+    
+    .start-screen .content-wrapper button{
+        width: 75%;
+    }
+    
+    .player h1,
+    .opponent h1{
+        font-size: 1.55em;
+    }
+    
+    .player h2,
+    .opponent h2{
+        font-size: 1.1em;
+    }
+    
+    #atk,
+    #use-pot{
+        width: 45%;
+    }
+    
+    .report-layout h1{
+        font-size: 1.55em;
+        margin-top: 65px;
+    }
+    
+}
+
+@media only screen and (min-width: 768px) {
+/* ######### TABLET #########*/
+/* Default stylings*/
+    
+    .content-wrapper{
+        max-width: 640px;
+        margin: 100px 0;
+    }
+    
+
+    
+/*header*/
+    
+    header .content-wrapper{
+    margin-top: 75px;
+    margin-bottom: 0;
+}
+    
+    
+    header figure{
+        width: 60%;
+    }
+    
+    
+/*start screen*/
+    
+    .start-screen p{
+        font-size: 1.25em;
+        margin: 20px;
+    }
+    
+    .start-screen .content-wrapper{
+        margin: 100px 0;
+    }
+    
+    .start-screen .content-wrapper button{
+        width: 45%;
+    }
+    
+/*game screen*/
+    
+    .game-screen .content-wrapper{
+        margin-top: 50px;
+    }
+    
+    .player{
+        width: 49%;
+    }
+    
+    .player h1,
+    .opponent h1{
+        margin-bottom: 20px;
+    }
+    
+    #atk,
+    #use-pot{
+        width: 25%;
+    }
+    
+/*action report*/
+    .action-report{
+        height: 400px;
+        margin-top: 35px;
+    }
+    
+    .report-layout h1{
+        margin-top: 65px;
+    }
+    
+    #combat-report{
+        font-size: 1.25em;
+    }
+    
+}
+
+@media only screen and (min-width: 1200px){
+    
+    .content-wrapper{
+        max-width: 960px;  
+        margin: 75px 0;
+    }
+    
+/*header logo*/
+    header figure{
+        width: 50%;
+    }
+    
+    header .content-wrapper{
+        margin-top: 50px;
+    }
+    
+/*start screen*/
+    
+    .start-screen p{
+        font-size: 1.5em;
+        line-height: 1.45em;
+        margin: 25px;
+    }
+    
+    .start-screen .content-wrapper button{
+        width: 30%;
+    }
+    
+/* game screen*/
+    
+    .player h1,
+    .opponent h1{
+        font-size: 2.5em;
+    }
+
+    .player h2,
+    .opponent h2{
+        font-size: 1.8em;
+    }
+    
+    .actions{
+        width: 80%;
+    }
+    
+    #atk,
+    #use-pot{
+        width: 20%;
+    }
+    
+/*action report*/
+    .action-report{
+        height: 450px;
+        margin-top: 45px;
+    }
+    
+    .report-layout h1{
+        font-size: 2.5em;
+    }
+    
+    #combat-report {
+        font-size: 1.4em;
+    }
+    
+/* footer*/
+    .social-media {
+        max-width: 45%;
+    }
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+

@@ -1,0 +1,120 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+    
+<!-- Google Fonts link-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Mystery+Quest&family=Roboto&display=swap" rel="stylesheet">
+    
+    <!--fontawesome-->
+    <script src="https://kit.fontawesome.com/3865ed5ffd.js" crossorigin="anonymous"></script>
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+  <!-- Add your site or application content here -->
+<div class="game">
+    
+      <header>
+          <div class="content-wrapper">
+              <figure>
+                <img src="img/js-quest-logo.png" alt="js quest game logo">
+              </figure>
+          </div>
+      </header>
+    
+      
+      <div class="start-screen">
+          <div class="content-wrapper">
+              <p>Welcome to JS Quest, a turn based combat simulator built entirely with JavaScript and JQuery. The last fighter standing is declared the victor! If you'd like to play again please refresh your browser.<br><br> This game is still under development - new features and code revisions will be added over time as I continue to practice and learn more about frontend programming. After the initial launch plans include: different opponent types, more engaging combat mechanics, wave based combat, a leveling and saving system. Press start to begin!</p>
+              <button id="start-game"><figure><img src="img/short-sword-start.png"></figure></button>
+          </div>
+      </div>
+    
+    <div class ="game-screen">
+        <div class="content-wrapper">
+            <div class="battle-info">
+                <div class="player">
+                    <h1>Player:</h1>
+                    <h2>HP: <span id="player-hp"> 100</span> / <span id="maxHP">100</span></h2>
+                    <h2>Potions: <span id="player-pots">2</span> / 2</h2>
+                    <div class="actions">
+                        <button id="atk"><figure><img src="img/attack-icon.jpg"></figure></button>
+                        <button id="use-pot"><figure><img src="img/potion-icon.jpg"></figure></button>
+                    </div>
+                </div>
+
+              <div class="opponent">
+                    <h1>Opponent:</h1>
+                    <h2>HP: <span id="opp-hp"> 100</span> / <span id="maxHP">100</span></h2>
+                    <h2>Potions: <span id="opp-pots">2</span> / 2</h2>
+                </div>
+            </div>
+            <!-- End battle-info-->
+            
+            <div class="action-report">
+                <div class="report-layout">
+                    <h1>Combat Report</h1>
+
+                    <p id="combat-report">This is where information from your battle will be displayed.</p>
+                </div>
+            </div>
+
+        </div>
+        <!-- End of content-wrapper-->
+    </div>
+<!--end of game-screen div-->
+</div>
+<!--end of game div-->
+    
+    <footer>
+        <div class="content-wrapper">
+            <div class="social-media">
+                <div class="social-icons">
+                    <p><a href="https://github.com/christopherbean" target="_blank"><i class="fab fa-github"></i></a></p>
+                    <p><a href="https://www.instagram.com/mr.christopherbean/" target="_blank"><i class="fab fa-instagram"></i></a></p>
+                    <p><a href="https://www.facebook.com/chris.bean.5688476" target="_blank"><i class="fab fa-facebook"></i></a></p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p> JS Quest by <a href="https://www.chrisbeandev.com" target="_blank">Chrisbeandev.com</a></p>
+                <p>Chrisbeandev.com &copy; 2021</p>
+            </div>
+        </div>
+    </footer>
+    
+
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/game.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+    
+</body>
+
+</html>
